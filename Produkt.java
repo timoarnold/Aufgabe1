@@ -11,7 +11,8 @@ public class Produkt {
     /**
      * Instanzvariabeln: 
      * 
-     * @param zustand: Aktueller Zustand eines Produkts (int). 
+     * - zustand: Aktueller Zustand eines Produkts (int). 
+     * 
      * Anmerkung: Bisher noch int-Wert, der manuell eingegeben werden kann für jeden Produkt-Zustand (bspw. "bestellt = 1")
      */
     

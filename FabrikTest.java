@@ -1,5 +1,3 @@
-
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +15,7 @@ public class FabrikTest
     private Fabrik fabrik; 
 
     /**
-     * Vor jedem Unit-Test der Klasse Fabrik und deren Inhalten, wird eine neue Fabrikinstanz erstellt..
+     * Vor jedem Unit-Test der Klasse Fabrik und deren Inhalten, wird eine neue Fabrikinstanz erstellt.
      */
     @BeforeEach
     public void setUp()
@@ -35,6 +33,10 @@ public class FabrikTest
         
     }
     
+    /**
+     * Testet, ob die richtige Bestellnummer ausgegeben wird, wenn Instanz Fabrik 
+     * erzeugt und 2 Testbestellungen aufgegeben werden.
+     */
     @Test
     public void TestBestellungsNummer(){
         //Arrange: Siehe BeforeEach
@@ -45,12 +47,12 @@ public class FabrikTest
 
         //Assert: Check, ob Ergebnis == erwartetes Ergebnis
         assertEquals(2, fabrik.gibBestellungsNr());
-        
-        /**
-         * Getestet, ob die richtige Bestellnummer ausgegeben wird, wenn Instanz Fabrik 
-         * erzeugt und 2 Testbestellungen aufgegeben werden.
-         */
     }
+    
+    /**
+     * Hier wird getestet, ob die erste (Index 0) und die zweite (Index 1) Bestellung der ArrayList bestellungen den Erwartungen entspricht.
+     * Merke: Testfabrik.gibBestellungen().get(0).toString() entspricht System.out.println(eineBestellung) aus Fabrik.bestellungAusgeben
+     */
     
     @Test
     public void TestBestellungAusgeben(){
@@ -63,13 +65,12 @@ public class FabrikTest
         //Assert: Check, ob Ausgabe der Bestellung == erwartete / korrekte Ausgabe
         assertEquals("Bestellnummer:"+1+"\nStühle bestellt:"+2+"\nSofas bestellt:"+3,fabrik.gibBestellungen().get(0).toString());
         assertEquals("Bestellnummer:"+2+"\nStühle bestellt:"+6+"\nSofas bestellt:"+6,fabrik.gibBestellungen().get(1).toString());
-        /**
-         * Hier wird getestet, ob die erste (Index 0) und die zweite (Index 1) Bestellung der ArrayList bestellungen den Erwartungen entspricht.
-         * Merke: Testfabrik.gibBestellungen().get(0).toString() entspricht System.out.println(eineBestellung) aus Fabrik.bestellungAusgeben
-         */
-    
     }
     
+    /**
+     * Merke:BestellnummerGenerator wird nach diesem Test auf 1 zurückgesetzt, damit die Bestellnummern in weiteren Unit-Tests erneut 
+     * von Anfang an hochzählen können. 
+     */
     @Test
     public void TestBestellungAufgeben(){
         //Arrange: Siehe BeforeEach
@@ -83,12 +84,6 @@ public class FabrikTest
         assertEquals(7, fabrik.gibBestellungen().get(0).gibAnzahlSofas());
         
         Bestellung.resetBestellnummerGenerator();
-        
-        /**
-         * Merke:BestellnummerGenerator wird nach diesem Test auf 1 zurückgesetzt, damit die Bestellnummern in weiteren Unit-Tests erneut 
-         * von Anfang an hochzählen können. 
-         */
-    
     }
 }
 

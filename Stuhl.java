@@ -12,11 +12,11 @@ public class Stuhl extends Produkt {
     /**
      * Instanzvariabeln: Materialien, die zur Herstellung eines Stuhl benötigt werden
      *
-     * @param holzeinheiten: Anzahl Holzeiheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
-     * @param schrauben: Anzahl Schrauben, welche zur Herstellung eines Stuhls benötigt werden (int).
-     * @param farbeinheiten: Anzahl Farbeinheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
-     * @param kartoneinheiten: Anzahl Kartoneinheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
-     * @param produktionsZeit: Produktionszeit in Stunden, die zur Produktion eines Stuhls nötig ist (int).
+     * - holzeinheiten: Anzahl Holzeiheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
+     * - schrauben: Anzahl Schrauben, welche zur Herstellung eines Stuhls benötigt werden (int).
+     * - farbeinheiten: Anzahl Farbeinheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
+     * - kartoneinheiten: Anzahl Kartoneinheiten, welche zur Herstellung eines Stuhls benötigt werden (int).
+     * - produktionsZeit: Produktionszeit in Stunden, die zur Produktion eines Stuhls nötig ist (int).
      */ 
     private static int holzeinheiten;
     private static int schrauben;
@@ -25,8 +25,8 @@ public class Stuhl extends Produkt {
     private static int produktionsZeit;
 
     /**
-     * Konstruktor für Objekte der Klasse Stuhl: initialisiert alle Instanzvariabeln der Klasse Produkt
-     * @param (Siehe oben)
+     * Konstruktor für Objekte der Klasse Stuhl: initialisiert alle Instanzvariabeln (siehe oben) der Klasse Stuhl
+     * Mit super(1) wird "Zustand" aus der Superklasse Produkt initialisiert
      */
     public Stuhl() {
         super (1);
@@ -54,7 +54,7 @@ public class Stuhl extends Produkt {
     }
     
     /**
-     * Gib die Anzahl Farbeinheiten wieder
+     * Gib die Anzahl Farbeinheiten wieder.
      * @return die Anzahl benötigter Farbeinheiten für die Produktion eines Stuhls
      */
     public int getFarbEinheiten() {

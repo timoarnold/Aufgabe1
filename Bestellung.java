@@ -11,23 +11,23 @@ public class Bestellung {
     /** 
      * InstanzVariabeln:
      * 
-     * @param Liste bestellteProdukte: Liste alle Produkte, die bestellt wurden.
-     * @param bestellBestaetigung: Indikator, ob eine Bestellung erfolgreich bestätigt wurde oder nicht (boolean).
-     * @param beschaffungsZeit: Lieferzeit (in Tagen) für die Produkte (int).
-     * @param bestellNummer: Nummer einer Bestellung bei Empfang (int).
-     * @param anzahlStuehle: Anzahl Stühle, die in einer Bestellung nachgefragt wurden (int).
-     * @param anzahlSofas: Anzahl Sofas, die in einer Bestellung nachgefragt wurden (int).
+     * - Liste bestellteProdukte: Liste alle Produkte, die bestellt wurden.
+     * - bestellBestaetigung: Indikator, ob eine Bestellung erfolgreich bestätigt wurde oder nicht (boolean).
+     * - beschaffungsZeit: Lieferzeit (in Tagen) für die Produkte (int).
+     * - bestellNummer: Nummer einer Bestellung bei Empfang (int).
+     * - anzahlStuehle: Anzahl Stühle, die in einer Bestellung nachgefragt wurden (int).
+     * - anzahlSofas: Anzahl Sofas, die in einer Bestellung nachgefragt wurden (int).
      * 
      * Klassenvariabeln: 
      * 
-     * @param BestellnummerGenerator: Generiert bei der ersten Bestellung die Nummer 1, danach wird bei jeder Bestellung +1 zu dieser Zahl addiert. 
+     * - BestellnummerGenerator: Generiert bei der ersten Bestellung die Nummer 1, danach wird bei jeder Bestellung +1 zu dieser Zahl addiert. 
      * 
      * Anmerkung: Dies ergibt die Bestellnummer-Variable für jede Bestellung (damit nicht nur die Bestellungsanzahl Total ausgegeben wird)
      * Hier direkt auf 1 initialisiert, damit Bestellung 1 = 1. Danach bei jeder neuen Bestellung plus 1 (Siehe "++" im Konstruktor).
      */
     
     //Klassenvariablen:
-    static private int BestellnummerGenerator=1;
+    private static int BestellnummerGenerator=1;
     
     //Intanzvariablen:
     private ArrayList<Produkt> bestellteProdukte;
@@ -64,10 +64,9 @@ public class Bestellung {
     }
 
     /**
-     * Bestellung bestätigen.
-     * @param bestellBestaetigung: Gibt an, ob die Bestellung abgschlossen und bestätigt wurde(true).
+     * Bestätigt die Bestellung (true).
      * 
-     * Anmerkung: Falls noch nicht bestätigt, bleibt dieser Parameter 'false'.
+     * Anmerkung: Falls noch nicht bestätigt, bleibt diese Variabel 'false'.
      */
     
     public void bestellungBestaetigen() {
@@ -135,7 +134,6 @@ public class Bestellung {
     
     /**
      * Setze den Bestellnummergenerator (Klassenvariable) auf 0 zurück.
-     * @param BestellnummerGenerator: Generiert bei der ersten Bestellung die Nummer 1, danach wird bei jeder Bestellung +1 zu dieser Zahl addiert.
      * 
      * Amnmerkung: Dies dient u. A. zum Unit-Testing.
      */

@@ -12,12 +12,12 @@ public class Sofa extends Produkt {
     /**
      * Instanzvariabeln: Materialien, die zur Herstellung eines Sofas benötigt werden
      *
-     * @param holzeinheiten: Anzahl Holzeiheiten, welche zur Herstellung eines Sofas benötigt werden (int).
-     * @param schrauben: Anzahl Schrauben, welche zur Herstellung eines Sofas benötigt werden (int).
-     * @param farbeinheiten: Anzahl Farbeinheiten, welche zur Herstellung eines Sofas benötigt werden (int).
-     * @param kartoneinheiten: Anzahl Kartoneinheiten, welche zur Herstellung eines Sofas benötigt werden (int).
-     * @param produktionsZeit: Produktionszeit in Stunden (int), die zur Produktion eines Sofas nötig ist.
-     * @param kissen: Anzahl Kissen, welche zur Herstellung eines Sofas benötigt werden (int).
+     * - holzeinheiten: Anzahl Holzeiheiten, welche zur Herstellung eines Sofas benötigt werden (int).
+     * - schrauben: Anzahl Schrauben, welche zur Herstellung eines Sofas benötigt werden (int).
+     * - farbeinheiten: Anzahl Farbeinheiten, welche zur Herstellung eines Sofas benötigt werden (int).
+     * - kartoneinheiten: Anzahl Kartoneinheiten, welche zur Herstellung eines Sofas benötigt werden (int).
+     * - produktionsZeit: Produktionszeit in Stunden (int), die zur Produktion eines Sofas nötig ist.
+     * - kissen: Anzahl Kissen, welche zur Herstellung eines Sofas benötigt werden (int).
      */ 
     
     private static int holzeinheiten;
@@ -28,8 +28,8 @@ public class Sofa extends Produkt {
     private static int produktionsZeit;
 
     /**
-     * Konstruktor für Objekte der Klasse Sofa: initialisiert alle Instanzvariabeln der Klasse Produkt
-     * @param (Siehe oben)
+     * Konstruktor für Objekte der Klasse Sofa: initialisiert alle Instanzvariabeln (siehe oben) der Klasse Sofa
+     * Mit super(1) wird "Zustand" aus der Superklasse Produkt initialisiert
      */
     public Sofa() {
         super(1); 
